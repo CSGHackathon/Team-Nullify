@@ -5,15 +5,18 @@ export default Ember.Controller.extend({
   userName: '',
   password: '',
   rememberMe: false,
-  isAdminRoute: function () {
-    var currentRouteName = this.controllerFor('application').get('currentRouteName');
-    if (currentRouteName === 'portal.admin' ) {
-      return true;
+  adminRoute: false,
+  isAdminRoute: Ember.computed('adminRoute', {
+    get () {
+      var currentRouteName = this.controllerFor('application').get('currentRouteName');
+      if (currentRouteName === 'portal.admin' ) {
+        return true;
+      }
+      else {
+        return false;
+      }
     }
-    else {
-      return false;
-    }
-  },
+  }),
 
   /**
   Whether or not to request name for chat

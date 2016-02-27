@@ -18,7 +18,8 @@
     "Faker": "~3.0.0",
     "ember-c3": "~0.1.5",
     "firebase": "^2.1.0",
-    "crypto-js": "^3.1.6"
+    "crypto-js": "^3.1.6",
+    "handlebars": "3.0.0"
   },
   "devDependencies": {
     "envy-ux": "https://github.com/clevernyyyy/envy-ux.git#0.0.3",
