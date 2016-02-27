@@ -1,8 +1,8 @@
 <img class="img-responsive" src="/assets/images/Banner.png">
 
 {{#if authController.isAuthenticated}}
-  <h1>Admin</h1>
-  {{outlet}}
+  <div class="container">
+    <h1>Client Support Administrative Portal</h1>
 
   {{#link-to "editinvoice" tagName="li"}}<a class="navbar-brand" href="editinvoice">Edit Envoices</a>{{/link-to}}
   <table class="table">
@@ -25,26 +25,27 @@
         </th>
       </tr>
     </thead>
-    {{#each model as |message|}}
-      <tbody>
-        <tr>
-            <td class="">
-              {{message.date}}
-            </td>
-            <td class="">
-              {{message.time}}
-            </td>
-            <td class="">
-              {{message.body}}
-            </td>
-            <td class="">
-              {{message.phone}}
-            </td>
-            <td class="">
-              {{message.acct_name}}
-            </td>
-        </tr>
-      </tbody>
-    {{/each}}
-  </table>
+      {{#each model as |message|}}
+        <tbody>
+          <tr>
+              <td class="">
+                {{message.date}}
+              </td>
+              <td class="">
+                {{message.time}}
+              </td>
+              <td class="">
+                {{message.body}}
+              </td>
+              <td class="">
+                {{message.phone}}
+              </td>
+              <td class="">
+                {{message.acct_name}}
+              </td>
+          </tr>
+        </tbody>
+      {{/each}}
+    </table>
+  </div>
 {{/if}}
