@@ -69,6 +69,34 @@
     margin: 1.5em 9.1em;
 }
 
+.btn-chat-admin {
+    background: linear-gradient(to bottom, #dd1617 2%, #8c100a 100%);
+    color: #FFF;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    padding: .5em 1.1em;
+    text-transform: uppercase;
+    top: 0;
+    margin-top: -799px;
+    margin-left: 566px;
+}
+
+.btn-chat-invoice {
+    background: linear-gradient(to bottom, #dd1617 2%, #8c100a 100%);
+    color: #FFF;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    padding: .5em 1.1em;
+    text-transform: uppercase;
+    top: 0;
+    color: #fff;
+    text-decoration: none;
+    margin-top: -19px;
+    margin-left: 60px;
+}
+
 hr {
     margin-top: 0px;
     margin-bottom: 10.5px;
@@ -83,4 +111,12 @@ hr {
     font-size: 22px;
     font-weight: 300;
     color: #D63838;
+}
+
+.text-table {
+    font-size: 14px;
+}
+.text-head {
+    font-size: 16px;
+    font-weight: bold;
 }
