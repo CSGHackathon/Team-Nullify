@@ -1,4 +1,6 @@
-{{#if authController.isAuthenticated}}
+{{#if isAdminRoute }} 
+ {{outlet}}
+{{else authController.isAuthenticated}}
 	<h1>You are logged in</h1>
 	  {{! Modal UI Component }}
   <div id="modal-window">
