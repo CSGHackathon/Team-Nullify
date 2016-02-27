@@ -27,7 +27,6 @@ export default Ember.Route.extend({
         }
     	}
 	  }
-
   },
   actions: {
     willTransition: function(transition){

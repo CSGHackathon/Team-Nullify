@@ -4,6 +4,17 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'csgi',
     environment: environment,
+    contentSecurityPolicy: {
+      'default-src': "'self' https://*.firebaseio.com",
+      'script-src': "'self' https://*.firebaseio.com http://mrrio.github.io", // Allow scripts from self only, this prevents injection and XSS attacks
+      'font-src': "'self' http: https:", // Allow fonts to be loaded from self or any http/https source
+      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com http://text.unonullify.com", // Allow data (ajax/websocket) from self only (The same IP as this app)
+      'img-src': "'self' http: https:", //Allow images from any http/https server
+      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com", // Allow inline styles and loaded CSS from same IP
+      'media-src': "'self' "
+    },
+    firebase: 'https://popping-fire-3662.firebaseio.com/',
+    //firebase: 'incandescent-heat-8153.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
