@@ -2,11 +2,17 @@
 
 {{#if authController.isAuthenticated}}
   <div class="container">
+  <div style="display:inline-block;">
     <h1>Client Support Administrative Portal</h1>
+  </div>
 
-  {{#link-to "editinvoice" tagName="li"}}<a class="navbar-brand" href="editinvoice">Edit Envoices</a>{{/link-to}}
-  <table class="table">
-    <thead>
+  <button class="btn btn-default btn-chat-invoice">
+    {{#link-to "editinvoice"}}
+      <a style="color:#fff; text-decoration:none; list-style-type: none;"href="editinvoice">Edit Invoices</a>
+    {{/link-to}}
+  </button>
+  <table class="table table-striped table-bordered table-hover">
+    <thead class="thead-inverse text-head">
       <tr>
         <th>
         Date
@@ -27,7 +33,7 @@
     </thead>
       {{#each model as |message|}}
         <tbody>
-          <tr>
+          <tr class="text-table">
               <td class="">
                 {{message.date}}
               </td>
