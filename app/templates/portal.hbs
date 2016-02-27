@@ -1,6 +1,4 @@
-{{#if isAdminRoute }} 
- {{outlet}}
-{{else if authController.isAuthenticated}}
+{{#if authController.isAuthenticated}}
 	<h1>You are logged in</h1>
 {{else}}
 	<form class="form-signin">
