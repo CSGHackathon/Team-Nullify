@@ -31,6 +31,7 @@ export default Ember.Route.extend({
   model: function(){
     return Ember.RSVP.hash({
       users: this.store.findAll('user'),
+      invoiceInfo: this.store.findAll('editinvoice')
     });
   },
   actions: {
