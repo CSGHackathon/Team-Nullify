@@ -38,8 +38,5 @@
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.0.4",
     "emberfire": "1.6.5"
-  },
-  "dependencies": {    
-    "chat-modal": "git+ssh://git@gitlab.unonullify.com:clevernyyyy/chat-modal.git"
   }
 }
