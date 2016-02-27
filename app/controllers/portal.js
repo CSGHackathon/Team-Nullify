@@ -51,7 +51,6 @@ export default Ember.Controller.extend({
   actions: {
     submitLogin: function() {
       console.log("portal Controller");
-      console.log();
       var userName = this.get('userName');
       var password = this.get('password');
       var rememberMe = this.get('rememberMe');
