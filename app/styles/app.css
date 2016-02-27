@@ -64,3 +64,12 @@ hr {
     border: 0;
     border-top: 1px solid #ccc;
 }
+
+.nav-support-head {
+    text-align: center; 
+    margin-top: 6px;
+    padding-left: -19px;
+    font-size: 22px;
+    font-weight: 300;
+    color: #D63838;
+}
