@@ -4,6 +4,7 @@
   <h1>Admin</h1>
   {{outlet}}
 
+  {{#link-to "editinvoice" tagName="li"}}<a class="navbar-brand" href="editinvoice">Edit Envoices</a>{{/link-to}}
   <table class="table">
     <thead>
       <tr>
@@ -24,7 +25,6 @@
         </th>
       </tr>
     </thead>
-    {{log modelArray}}
     {{#each model as |message|}}
       <tbody>
         <tr>

@@ -9,7 +9,8 @@ Router.map(function() {
   this.route('portal', function(){
     this.route('admin');
   });
-  this.route('invoice');
+  this.route('invoice', function() {});
+  this.route('editinvoice');
 });
 
 export default Router;
