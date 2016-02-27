@@ -4,8 +4,8 @@
     {{! Modal UI Component }}
     <div class="container">
       <div id="modal-window">
+      {{log 'gets here'}}
         <button class="btn btn-default btn-chat-admin" data-toggle="modal" data-target="#modalWindow">Customer Chat</button>
-        {{log 'model:  ' model}}
         {{#modal-window title="" displaySubmit="false" displayNameForm="true"}}
           {{#if isDisplayNameForm}}
             <div id="chat-display">
