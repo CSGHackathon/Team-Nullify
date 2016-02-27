@@ -5,9 +5,9 @@ export default Ember.Route.extend({
     this.authCheck(transition);
 
     // Forward all request for index to portal
-    //if (transition.targetName === 'index' ){
-    //  this.transitionTo('portal');
-    //}
+    if (transition.targetName === 'index' ){
+      this.transitionTo('portal.index');
+    }
   },
   authCheck: function(transition){
     //Method to check user credentials and redirect if necessary
