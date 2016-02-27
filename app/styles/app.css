@@ -2,3 +2,6 @@
 	border-style: solid;
 	border-radius: 25px;
 }
+.invoiceImg{
+	max-width: 100%;
+}

@@ -1,6 +1,13 @@
 
 <div class="container">
+    <br><br>
+    <button class="btn btn-primary" {{action 'downloadPDF'}}>Download As PDF</button>
+    <br><br><br>
     <div id="canvas">
+        <img class="invoiceImg" src="/assets/images/Invoice2.png">
+    </div>
+    <!--div id="invoice">
+
         <div class="row">
             <div id="invoiceEle" class="col-xs-6">
                 <h1>Hello {{authController.user.name}} </h1>
@@ -82,7 +89,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div-->
 </div>
-
-<button {{action 'downloadPDF'}}>PDF</button>

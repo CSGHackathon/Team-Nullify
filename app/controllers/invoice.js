@@ -5,15 +5,15 @@ export default Ember.Controller.extend({
 	graphData:{},
 	actions:{
 		downloadPDF: function(){
-			var pdf = new jsPDF('p', 'pt', 'letter');
+			var pdf = new jsPDF('l', 'pt', 'a3');
 			var source = Ember.$('#canvas')[0];
 			var margins = {
-				top: 80,
-				bottom: 60,
-				left: 40,
-				width: 522
+				top: 10,
+				bottom: 10,
+				left: 10,
+				width: 300
 			};
-			pdf.addHTML(
+			pdf.fromHTML(
 			source,
 			margins.left,
 			margins.top, {
@@ -52,5 +52,13 @@ export default Ember.Controller.extend({
                 doc.save('sample-file.pdf');
             }
         });*/
+		/*downloadPDF: function(){
+			html2canvas(Ember.$('#canvas'), {
+				onrendered: function(canvas){
+					var myImage = canvas.toDataURL("image/png");
+					window.open(myImage);
+				}
+			})
+		}*/
  	}
 });
