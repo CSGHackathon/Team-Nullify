@@ -1,9 +1,13 @@
 #invoiceEle{
-	border-style: solid;
-	border-radius: 25px;
+	border-top:	solid;
+	border-bottom: solid;
+}
+#canvas{
+	background-color: white;
 }
 .invoiceImg{
 	max-width: 100%;
+}
 
 .form-signin {
     margin-top: 50px;
