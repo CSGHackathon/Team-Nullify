@@ -108,14 +108,15 @@
 
       <div id="left-col" class="col-xs-8 col-md-8">
         <h2 style="color:#333;">Welcome to our brand new Service Portal!</h2>
-        <span style="font-size:16px;">We are here to serve you, our customers.</span>
-        <img height="300" src="/assets/img/movers-module.png">
+        <div style="font-size:16px;">We are here to serve you, our customers.</div>
+        <img height="400" src="/assets/img/movers-module.png">
       </div>
 
       <div id="right-col" class="col-xs-4 col-md-4">
         <img height="200" src="/assets/img/cust-service.jpg">
         <div id="modal-window">
-          <button class="btn btn-default" data-toggle="modal" data-target="#modalWindow">Chat with Representative</button>
+          <span style="font-size:16px">Don't want to talk to our robots?  Chat with a LIVE person now!</span>
+          <button class="btn btn-default btn-chat" data-toggle="modal" data-target="#modalWindow">Live Chat</button>
           {{log 'model:  ' model}}
           {{#modal-window title="" displaySubmit="false" displayNameForm="true"}}
             {{#if isDisplayNameForm}}
@@ -181,10 +182,14 @@
           {{/modal-window}}
         </div>
 
-      </div>
 
-     <img src="/assets/img/map1.png" alt="Logo">
+      </div>
     </div>
+    <div style="padding:30px 130px;">
+        <div style="font-size:16px; padding: 15px">Learn about our outages live.</div>
+        <img src="/assets/img/map1.png" alt="Logo">
+
+        </div>
   {{else}}
     <div class="container">
   		<form class="form-signin">
