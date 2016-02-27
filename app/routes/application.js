@@ -28,6 +28,11 @@ export default Ember.Route.extend({
     	}
 	  }
   },
+  model: function(){
+    return Ember.RSVP.hash({
+      users: this.store.findAll('user'),
+    });
+  },
   actions: {
     willTransition: function(transition){
       this.authCheck(transition);

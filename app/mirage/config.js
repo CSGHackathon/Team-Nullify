@@ -5,4 +5,5 @@ import { faker } from 'ember-cli-mirage';
 
 export default function() {
   
+  this.get('users');
 }
