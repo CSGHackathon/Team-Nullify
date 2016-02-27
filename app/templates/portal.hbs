@@ -75,19 +75,20 @@
   {{else}}
     <div class="container">
       <form class="form-signin">
-        <h2 class="form-signin-heading">Customer Sign in</h2>
+        <h2 class="form-signin-heading">Admin Sign in</h2>
+        <hr />
         <div class="form-group">
           {{input type="text" value=userName enter="submitLogin" class="form-control" id="inputUserName" placeholder="Username"}}
         </div>
         <div class="form-group">
           {{input type="password" value=password enter="submitLogin" class="form-control" id="inputPassword" placeholder="Password"}}
         </div>
-        <div class="checkbox">
+        <div class="checkbox" style="display:inline-block;">
           <label>
            {{input type="checkbox" checked=rememberMe}} Remember me
           </label>
+          <button type="button" class="btn btn-login-submit btn-login-submit-admin" {{action "submitLogin"}}>Sign in</button>
         </div>
-        <button type="button" class="btn btn-success btn-login-submit" {{action "submitLogin"}}>Sign in</button>
       </form>
     </div>
   {{/if}}
@@ -169,7 +170,8 @@
   {{else}}
     <div class="container">
   		<form class="form-signin">
-  			<h2 class="form-signin-heading">Customer Sign in</h2>
+  			<h2 class="form-signin-heading">Customer Login</h2>
+        <hr>
   		  <div class="form-group">
   		    {{input type="text" value=userName enter="submitLogin" class="form-control" id="inputUserName" placeholder="Username"}}
   		  </div>
@@ -181,7 +183,7 @@
   		     {{input type="checkbox" checked=rememberMe}} Remember me
   		    </label>
   		  </div>
-  		  <button type="button" class="btn btn-success btn-login-submit" {{action "submitLogin"}}>Sign in</button>
+  		  <button type="button" class="btn btn-login-submit" {{action "submitLogin"}}>Sign in</button>
   		</form>
     </div>
   {{/if}}

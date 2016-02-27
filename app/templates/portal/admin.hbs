@@ -1,47 +1,50 @@
 <img class="img-responsive" src="/assets/images/Banner.png">
-<h1>Admin</h1>
-{{outlet}}
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>
-      Date
-      </th>
-      <th>
-      Time
-      </th>
-      <th>
-      Message
-      </th>
-      <th>
-      Phone
-      </th>
-      <th>
-      Account Owner
-      </th>
-    </tr>
-  </thead>
-  {{log modelArray}}
-  {{#each model as |message|}}
-    <tbody>
+{{#if authController.isAuthenticated}}
+  <h1>Admin</h1>
+  {{outlet}}
+
+  <table class="table">
+    <thead>
       <tr>
-          <td class="">
-            {{message.date}}
-          </td>
-          <td class="">
-            {{message.time}}
-          </td>
-          <td class="">
-            {{message.body}}
-          </td>
-          <td class="">
-            {{message.phone}}
-          </td>
-          <td class="">
-            {{message.acct_name}}
-          </td>
+        <th>
+        Date
+        </th>
+        <th>
+        Time
+        </th>
+        <th>
+        Message
+        </th>
+        <th>
+        Phone
+        </th>
+        <th>
+        Account Owner
+        </th>
       </tr>
-    </tbody>
-  {{/each}}
-</table>
+    </thead>
+    {{log modelArray}}
+    {{#each model as |message|}}
+      <tbody>
+        <tr>
+            <td class="">
+              {{message.date}}
+            </td>
+            <td class="">
+              {{message.time}}
+            </td>
+            <td class="">
+              {{message.body}}
+            </td>
+            <td class="">
+              {{message.phone}}
+            </td>
+            <td class="">
+              {{message.acct_name}}
+            </td>
+        </tr>
+      </tbody>
+    {{/each}}
+  </table>
+{{/if}}
