@@ -30,7 +30,7 @@ export default Ember.Controller.extend({
 
     // Server will return somthing like this
     var user = {
-        name: 'Adam',
+        name: credentials.userName,
         email: 'Adam@gmail.com',
         phone_number: 4023332227,
         icon: 'user here'
