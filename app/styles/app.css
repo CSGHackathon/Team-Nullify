@@ -58,6 +58,17 @@
     margin-left: 76px;
 }
 
+.btn-chat {
+    background: linear-gradient(to bottom, #dd1617 2%, #8c100a 100%);
+    color: #FFF;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    padding: .5em 1.1em;
+    text-transform: uppercase;
+    margin: 1.5em 9.1em;
+}
+
 hr {
     margin-top: 0px;
     margin-bottom: 10.5px;

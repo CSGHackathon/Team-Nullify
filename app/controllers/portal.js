@@ -67,6 +67,7 @@ export default Ember.Controller.extend({
         body: Ember.$('input#msgInput').val()
       });
       newMessage.save();
+      Ember.$('input#msgInput').val('');
       this.setProperties({
         name: '',
         body: ''
