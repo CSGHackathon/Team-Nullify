@@ -23,20 +23,24 @@
     </tr>
   </thead>
   {{log modelArray}}
-  {{#each model.content.content as |message|}}
-    {{log message._data}}
+  {{#each model as |message|}}
     <tbody>
       <tr>
-        {{#each message._data as |field|}}
-        {{log field}}
           <td class="">
-            {{field.date}}
-            {{field.time}}
-            {{field.body}}
-            {{field.phone}}
-            {{field.acct_name}}
+            {{message.date}}
           </td>
-        {{/each}}
+          <td class="">
+            {{message.time}}
+          </td>
+          <td class="">
+            {{message.body}}
+          </td>
+          <td class="">
+            {{message.phone}}
+          </td>
+          <td class="">
+            {{message.acct_name}}
+          </td>
       </tr>
     </tbody>
   {{/each}}
