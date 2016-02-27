@@ -62,7 +62,7 @@ export default Ember.Controller.extend({
     },
 
     addMessage: function() {
-      var newMessage = this.store.createRecord('support', {
+      var newMessage = this.store.createRecord('portal', {
         name: Ember.$('h3#modal-title').html().substring(8,1000).slice(0, -1),
         body: Ember.$('input#msgInput').val()
       });
