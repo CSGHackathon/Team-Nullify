@@ -1,0 +1,21 @@
+{{#if isAdminRoute }} 
+ {{outlet}}
+{{else if authController.isAuthenticated}}
+	<h1>You are logged in</h1>
+{{else}}
+	<form class="form-signin">
+		<h2 class="form-signin-heading">Customer Sign in</h2>
+	  <div class="form-group">
+	    {{input type="text" value=userName enter="submitLogin" class="form-control" id="inputUserName" placeholder="Username"}}
+	  </div>
+	  <div class="form-group">
+	    {{input type="password" value=password enter="submitLogin" class="form-control" id="inputPassword" placeholder="Password"}}
+	  </div>
+	  <div class="checkbox">
+	    <label>
+	     {{input type="checkbox" checked=rememberMe}} Remember me
+	    </label>
+	  </div>
+	  <button type="button" class="btn btn-success btn-login-submit" {{action "submitLogin"}}>Sign in</button>
+	</form>
+{{/if}}
